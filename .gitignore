@@ -1,0 +1,11 @@
+__pycache__/
+.venv/
+.env
+*.env
+data/
+paper/latex/*.aux
+paper/latex/*.log
+paper/latex/*.bbl
+paper/latex/*.blg
+paper/latex/*.out
+paper/latex/main.pdf

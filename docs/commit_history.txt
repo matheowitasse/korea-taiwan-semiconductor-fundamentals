@@ -1,0 +1,557 @@
+Dated history of the research repository, restricted to the pre-registrations (docs/), the analysis
+scripts (src/) and the results (results/). Each block: date, commit, message, files touched.
+The decisive results were frozen at tag finding-v1: 2026-09-21 15:41:40 +0200  b56a94d.
+
+2026-09-16 11:32:53 +0200  09dd16b  Project setup: hypotheses, research log, Q2 first exploration
+
+results/q2_explore_overnight.md
+src/q2_explore_overnight.py
+
+2026-09-16 11:39:19 +0200  1a03048  Q1: index KCS trade press releases (10/20-day archive from 2016)
+
+src/q1_index_kcs_releases.py
+
+2026-09-16 11:46:52 +0200  5c85708  Q1: download pipeline, HWP/HWPX/PDF text extraction, release field extractor
+
+src/doc_text.py
+src/q1_download_kcs_releases.py
+src/q1_extract_releases.py
+
+2026-09-16 11:51:01 +0200  e4380f3  Q1 pre-registration: signal, returns, primary test and success criteria fixed before looking at results
+
+docs/q1_preregistration.md
+
+2026-09-16 11:52:11 +0200  75df1e7  Q1 test script implementing the pre-registered plan
+
+src/q1_test_signal.py
+
+2026-09-16 12:31:34 +0200  d6685a1  Q1 data: all 226 releases extracted; format variants fixed (2023 arrows, 2018-19 working-day phrasing); download retries
+
+src/q1_download_kcs_releases.py
+src/q1_extract_releases.py
+
+2026-09-16 12:31:59 +0200  59e3bfa  Q1 pre-registered test: primary result not promising; results logged
+
+results/q1_first_test.md
+
+2026-09-16 13:41:25 +0200  c184738  Q1 holdout pre-registration: AI-era sell-the-news hypothesis, fixed before loading post-2025-06 data
+
+docs/q1_holdout_preregistration.md
+
+2026-09-16 13:42:09 +0200  4f849ef  Q1 holdout test script (pre-registered, run once)
+
+src/q1_holdout_test.py
+
+2026-09-16 13:42:27 +0200  ad511ac  Q1 holdout test result: not confirmed; holdout now used
+
+results/q1_holdout_test.md
+
+2026-09-16 13:48:23 +0200  f530df3  Q3 pre-registration: edge search A-E around export releases, discovery/validation rules fixed before running
+
+docs/q3_edge_search_preregistration.md
+
+2026-09-16 13:49:13 +0200  84e7cc2  Q3 edge search script (discovery on all tests, validation only for survivors)
+
+src/q3_edge_search.py
+
+2026-09-16 13:49:36 +0200  7b4ae0b  Q3 edge search result: no test passed discovery
+
+results/q3_edge_search.md
+
+2026-09-16 13:51:27 +0200  db413eb  Q3 exploratory AI-era run: deviation and rules logged before running
+
+src/q3_ai_era_exploratory.py
+
+2026-09-16 13:51:45 +0200  7c13acc  Q3 AI-era exploratory result: no lead; weak pre-release drift noted
+
+results/q3_ai_era_exploratory.md
+
+2026-09-16 14:16:38 +0200  e18498e  Q4 pre-registration (Asian supplier rebound, KR/TW/JP, AI-era discovery/validation) and IBKR 1-minute download script
+
+docs/q4_supplier_rebound_preregistration.md
+src/ibkr_download_minutes.py
+
+2026-09-16 14:17:14 +0200  d983a65  Q4 supplier rebound test script (validation only for discovery survivors)
+
+src/q4_supplier_rebound.py
+
+2026-09-16 14:17:43 +0200  f39aecc  Q4 result: no market passed discovery; validation not run
+
+results/q4_supplier_rebound.md
+
+2026-09-16 20:16:01 +0200  7c4b03c  Naver investor-flow downloader; log KRX login issue and Naver vs KRX cross-check
+
+src/naver_download_flows.py
+
+2026-09-16 23:07:50 +0200  e0dbc9b  Q5 pre-registration (investor flows, KRX data, AI-era discovery/validation) and KRX manual import script
+
+docs/q5_investor_flows_preregistration.md
+src/krx_manual_import.py
+
+2026-09-16 23:09:18 +0200  3a91b40  Q5 pre-registration: T7 prior withdrawn by the author before any run (test was already two-sided)
+
+docs/q5_investor_flows_preregistration.md
+results/q1_first_test.md
+results/q1_holdout_test.md
+results/q2_explore_overnight.md
+results/q3_ai_era_exploratory.md
+results/q3_edge_search.md
+results/q4_supplier_rebound.md
+
+2026-09-16 23:16:27 +0200  e0055f9  Q5 test script (investor flows; validation only for discovery survivors)
+
+src/q5_investor_flows.py
+
+2026-09-16 23:21:11 +0200  d996d04  Q5 result: no investor-flow test passed discovery; validation not run
+
+results/q5_investor_flows.md
+
+2026-09-17 08:27:54 +0200  66bf5c0  Q4b pre-registration: Korea-only supplier rebound, narrowed validation on 2025-07 -> 2026-09-16
+
+docs/q4b_korea_supplier_rebound_validation_preregistration.md
+
+2026-09-17 08:28:10 +0200  1516699  Q4b script (Korea supplier rebound, narrowed validation)
+
+src/q4b_korea_rebound_validation.py
+
+2026-09-17 08:28:27 +0200  c864d03  Q4b result: Korean supplier rebound fails narrowed validation (-31 bp, n 34)
+
+results/q4b_korea_rebound_validation.md
+
+2026-09-17 08:33:28 +0200  98ff68d  Q6 pre-registration: 14-test edge sweep (lead-lag, momentum, cross-section, calendar, flow streaks, earnings)
+
+docs/q6_edge_sweep_preregistration.md
+
+2026-09-17 08:35:08 +0200  74f5c56  Q6 edge sweep script (14 tests; validation only for discovery survivors)
+
+src/q6_edge_sweep.py
+
+2026-09-17 08:35:41 +0200  6ae82fe  Q6 result: no test in the 14-test sweep passed discovery
+
+results/q6_edge_sweep.md
+
+2026-09-17 13:11:08 +0200  eefcff0  Q7 data: DART company list with industry codes and earnings-disclosure calendar (no returns used)
+
+src/q7_dart_calendar.py
+src/q7_dart_companies.py
+
+2026-09-17 14:32:36 +0200  6c84fa6  Q7: Yahoo prices for chip universe and coverage check (no return analysis)
+
+src/q7_yahoo_prices.py
+
+2026-09-17 14:39:28 +0200  fca6752  Q7: import KIND delisting list and flag delisted chip companies
+
+src/q7_import_kind_delisted.py
+
+2026-09-17 15:20:44 +0200  4aad00a  Q7: import KRX prices for delisted chip-list companies
+
+src/q7_import_krx_prices.py
+
+2026-09-17 15:41:09 +0200  c0e5e7a  Q7: import KRX quarter-end market cap snapshots (dates identified by price matching)
+
+src/q7_import_krx_snapshots.py
+
+2026-09-17 17:29:42 +0200  e9f42be  Q7: Naver investor flows for 262 chip-universe stocks; fix downloader history truncation; KOSDAQ index
+
+src/naver_download_flows.py
+
+2026-09-17 17:35:07 +0200  22641d1  Q7: DART quarterly operating profit and SUE; coverage 80.8% -> T3 kept (no returns used)
+
+src/q7_dart_operating_profit.py
+
+2026-09-17 17:40:46 +0200  4c3b852  Q7 pre-registration
+
+docs/q7_pead_preregistration.md
+
+2026-09-17 19:07:35 +0200  603fba3  Q7 pre-registration finalised: fixed-sequence design (T1 first, T2-T5 Holm only if T1 passes)
+
+docs/q7_pead_preregistration.md
+
+2026-09-17 19:10:36 +0200  e5bfe05  Q7 test script (fixed-sequence PEAD test; structure checked with --check, no statistics seen)
+
+src/q7_pead_test.py
+
+2026-09-17 19:11:27 +0200  540e675  Q7 result: T1 (60-day post-earnings drift) narrowly fails discovery (+5.6%, t 1.63, p 0.103, placebo 0.082)
+
+results/q7_pead.md
+
+2026-09-17 19:20:05 +0200  e8ea4b8  Q7b pre-registration: T1 on the recent market (2025-07+), one-sided, plus descriptive regime comparison
+
+docs/q7b_pead_recent_market_preregistration.md
+
+2026-09-17 19:21:31 +0200  7686599  Q7b script (T1 on recent market + regime comparison; checked with --check, counts only)
+
+src/q7b_pead_recent.py
+
+2026-09-17 19:22:26 +0200  c0b85a9  Q7b result: T1 fails on recent market (-4.4%); market clearly changed after 2025-07 (volatility, flows); T3 flagged for audit
+
+results/q7b_pead_recent.md
+
+2026-09-17 19:28:23 +0200  7b0653f  Q7 T3 audit (exploratory): no leak; recent SUE effect robust, not price momentum, boom-specific
+
+results/q7_t3_audit.md
+src/q7_t3_audit.py
+
+2026-09-17 23:16:40 +0200  7057f77  Q8 pre-registration: three out-of-sample tests of the profit-surprise drift (2022 season, Aug-2026 20-day, Nov-2026 60-day)
+
+docs/q8_sue_out_of_sample_preregistration.md
+
+2026-09-17 23:17:42 +0200  2f316b9  Q8 script (three out-of-sample SUE tests); q7 build_events gains an optional window length (default unchanged)
+
+src/q7_pead_test.py
+src/q8_sue_out_of_sample.py
+
+2026-09-17 23:18:02 +0200  c8c8f2a  Q8 result: S1 and S2 fail (2.5%, placebo 0.32; -8.7%, placebo 0.93); S3 pending November
+
+results/q8_sue_out_of_sample.md
+
+2026-09-17 23:24:18 +0200  7461107  Q9 pre-registration: has the Korean open overreaction returned in the 2025-07+ regime (4 tests, Holm)
+
+docs/q9_open_overreaction_new_regime_preregistration.md
+
+2026-09-17 23:24:44 +0200  9319f3c  Q9 script (open overreaction in the new regime)
+
+src/q9_open_overreaction.py
+
+2026-09-17 23:25:05 +0200  9c3d293  Q9 result: no pass; Samsung/SK Hynix reversal betas -0.17/-0.19 (placebo 0.10), suppliers flat
+
+results/q9_open_overreaction.md
+
+2026-09-17 23:32:36 +0200  b91e06f  Q10 exploratory scan (labelled, not a test): look-ahead bug found and fixed; 3 candidates for forward testing
+
+results/q10_exploratory_scan.md
+src/q10_exploratory_scan.py
+
+2026-09-17 23:40:39 +0200  e05df96  Q10b: proper multiple-testing correction kills the scan candidates (best |t| 3.19 vs null median best 3.55)
+
+results/q10b_multiple_testing.md
+src/q10b_multiple_testing.py
+
+2026-09-21 11:04:23 +0200  985dc2a  Q8 step 0: structural-break estimate of the AI-era start (exports and SOXX/SPY, no Q8 outcomes used)
+
+results/q8_regime_break.md
+src/q8_regime_break.py
+
+2026-09-21 11:11:32 +0200  adb338b  Q8 pre-registration approved: multi-factor cross-section, regime option C (2023-01 start, 2024-02 robustness split)
+
+docs/q8_multifactor_preregistration.md
+
+2026-09-21 12:51:29 +0200  f5cf0b8  Q8: full DART key accounts, extended price history, and the multi-factor test script (written before running)
+
+src/q8_dart_financials.py
+src/q8_extend_prices.py
+src/q8_multifactor.py
+
+2026-09-21 13:00:39 +0200  056ebfd  Q8 results: composite, quality and earnings-momentum factors pass discovery and validation; diagnostics survive
+
+results/q8_diagnostics.md
+results/q8_multifactor.md
+src/q8_diagnostics.py
+src/q8_multifactor.py
+
+2026-09-21 13:49:34 +0200  55582e3  Q8 live tracking started (first portfolio recorded); TW/JP data feasibility checked
+
+src/q8_live_tracker.py
+
+2026-09-21 14:07:45 +0200  f68d3ea  Q9 pre-registration (Japan + Taiwan cross-market confirmation) and Japanese data download
+
+docs/q9_cross_market_preregistration.md
+src/q9_jquants_download.py
+src/q9_taiwan_download.py
+
+2026-09-21 14:08:36 +0200  e07e475  Q9 Japan test script (written before running)
+
+src/q9_japan_test.py
+
+2026-09-21 14:11:45 +0200  176adc5  Q9 Japan result: composite factor confirmed (+292 bp/month, t 3.5); single factors positive but not significant
+
+results/q9_japan.md
+
+2026-09-21 14:12:37 +0200  fe98fe0  Q9 Taiwan test script (written before running)
+
+src/q9_taiwan_test.py
+
+2026-09-21 14:17:52 +0200  df76499  Q9 Taiwan result: monthly-revenue momentum confirmed (+259 bp/month, t 4.1); value negative
+
+results/q9_taiwan.md
+
+2026-09-21 14:36:16 +0200  b72a2c7  Q10: strategy spec fixed before backtest, plus backtest script
+
+docs/q10_strategy_spec.md
+src/q10_strategy_backtest.py
+
+2026-09-21 14:42:01 +0200  0b992ea  Q10 backtest: long-only top-20 beats local indices on average but lost badly to them in 2024
+
+results/q10_strategy_backtest.md
+src/q10_strategy_backtest.py
+
+2026-09-21 14:51:12 +0200  e1b04a7  Q10 risk adjustment: factor survives market/size/momentum controls in KR and TW; long-only implementation does not
+
+results/q10_risk_adjustment.md
+results/q10_risk_adjustment_signal.md
+src/make_recap_pdf.py
+src/q10_risk_adjustment.py
+
+2026-09-21 15:04:24 +0200  8b4b460  Q11 spec and script: two long-only constructions for Korea (fixed before running)
+
+docs/q11_korea_redesign_spec.md
+src/q11_korea_redesign.py
+
+2026-09-21 15:05:34 +0200  926b4ce  Q11 result: neither long-only redesign shows significant risk-adjusted alpha; the long-only question is underpowered
+
+results/q11_korea_redesign.md
+
+2026-09-21 15:08:34 +0200  17f85e5  Recap PDF: add the long-only harvestability section (Q11)
+
+src/make_recap_pdf.py
+
+2026-09-21 15:18:17 +0200  0762c96  Q12 pre-registration: Japan with 5-year history, decisive window 2021-07 to 2024-06 (never seen)
+
+docs/q12_japan_extended_preregistration.md
+
+2026-09-21 15:18:36 +0200  27ee2a3  Q12: correct decisive window to the subscription boundary (2021-10) before downloading
+
+docs/q12_japan_extended_preregistration.md
+
+2026-09-21 15:24:29 +0200  de75990  Q12 script and 5-year Japanese data (script written before running)
+
+src/q12_japan_extended.py
+
+2026-09-21 15:35:53 +0200  cc14f29  Q12 result: Japan narrowly not confirmed (t 1.80, 21 months); value strongest in the downturn window
+
+results/q12_japan_extended.md
+
+2026-09-21 15:39:38 +0200  3ddbb31  Q13 diagnostic: both legs significant; short leg steadier, long leg roughly half the effect in Korea
+
+results/q13_leg_decomposition.md
+src/q13_leg_decomposition.py
+
+2026-09-21 15:47:30 +0200  00d62a2  Q14 spec and script: market-hedged implementation (fixed before running)
+
+docs/q14_hedged_spec.md
+src/q14_hedged.py
+
+2026-09-21 15:48:29 +0200  51368fd  Q14 result: index-hedged version fails; the edge is sector-relative, not index-relative
+
+results/q14_hedged.md
+
+2026-09-21 15:58:40 +0200  cb23411  Pull official Japanese daily prices as verification data; Yahoo returns match at 0.9992 correlation
+
+src/q12_jquants_prices.py
+
+2026-09-21 16:50:10 +0200  f192bc6  Render the paper draft to PDF
+
+src/make_paper_pdf.py
+
+2026-09-21 18:51:54 +0200  37e96ab  Renumber the post-earnings-drift follow-up studies Q15-Q17b
+
+2026-09-21 18:58:11 +0200  1477c71  Q18 pre-registration: short-selling ban diagnostic and an implementable (shortable-only) short leg
+
+docs/q18_short_ban_and_implementable_preregistration.md
+
+2026-09-21 18:58:50 +0200  a3bda9d  Q18 script (ban diagnostic + implementable short leg), written before running
+
+src/q18_short_ban.py
+
+2026-09-21 18:59:27 +0200  8a3b268  Q18 result: ban did not create the short-leg alpha (common shock, Taiwan control); short leg not implementable (8% of losers shortable)
+
+results/q18_short_ban.md
+
+2026-09-21 19:08:11 +0200  03abaf3  Q19 pre-registration: limits-to-arbitrage test (does the signal work only where shorting is impossible?)
+
+docs/q19_limits_to_arbitrage_preregistration.md
+
+2026-09-21 19:08:46 +0200  d88f495  Q19 script (limits-to-arbitrage interaction test), written before running
+
+src/q19_limits_to_arbitrage.py
+
+2026-09-21 19:10:08 +0200  4711ec1  Q19 result: limits-to-arbitrage explanation not supported (interaction t -0.21); paper must drop that story
+
+results/q19_limits_to_arbitrage.md
+
+2026-09-21 19:41:02 +0200  c4d0abf  Q20 pre-registration: dilution filings (CB, rights issues) and post-filing drift, motivated by published Korean evidence
+
+docs/q20_dilution_events_preregistration.md
+
+2026-09-21 20:23:04 +0200  6500d35  Q20 downloader and test script (written and checked before running; counts only)
+
+src/q20_dart_dilution_events.py
+src/q20_dilution_test.py
+
+2026-09-21 20:23:32 +0200  9cfb9a8  Q20 result: no dilution test passed; CB announcement effect replicates; mean-median divergence noted
+
+results/q20_dilution.md
+
+2026-09-21 20:40:04 +0200  da9c00b  KIND importer: merge multiple delisting exports (for the extended-history sample); same output on the existing file
+
+src/q7_import_kind_delisted.py
+
+2026-09-21 20:40:25 +0200  a00c0bb  Q21 spec: liquidity robustness (is the effect just illiquidity?), fixed before running
+
+docs/q21_liquidity_robustness_spec.md
+
+2026-09-21 20:42:36 +0200  e6779a2  Q21: effect is not an illiquidity artefact (even across Amihud terciles, alpha t 3.69 with illiquidity factor); correct the value-weighted claim; add Section 5.5
+
+docs/q21_liquidity_robustness_spec.md
+results/q21_liquidity_robustness.md
+src/q21_liquidity_robustness.py
+
+2026-09-21 21:08:20 +0200  e85df31  Q22 pre-registration (extend Korea to 2015-2022) + extended delisting list, delisted-name prices, Q21 script/result, DART downloader retries
+
+docs/q22_extended_history_preregistration.md
+src/q8_dart_financials.py
+
+2026-09-21 21:24:53 +0200  3a57ea9  Q23 spec: build a market-wide Korean quality factor (AQR/French do not cover Korea) and test whether the chip effect survives it
+
+docs/q23_korea_wide_quality_spec.md
+
+2026-09-21 21:28:44 +0200  dc02edf  Q23: monthly prices for 2,554 listed Korean companies (market-wide quality benchmark) and the build script
+
+src/q23_korea_wide_quality.py
+
+2026-09-21 22:15:15 +0200  014d5dc  Q22 script (extended Korean history) + fundamentals back to 2015; borrow-check list
+
+src/q22_extended_history.py
+
+2026-09-21 22:39:42 +0200  ae013dd  Q22 result: effect predates the AI boom (+158 bp/month, t 2.69 over 74 unseen months; 118-month full sample t 4.06)
+
+results/q22_extended_history.md
+
+2026-09-21 23:00:50 +0200  c85b9e9  Q24 supersedes Q18 Part B: implementable short leg +282 bp (t 4.97) once eligibility is applied by regime
+
+results/q24_implementable_corrected.md
+src/q24_implementable_corrected.py
+
+2026-09-21 23:17:09 +0200  774369b  Q25: the strategy's short side does carry short interest (76% shorted on 2026-09-17, positions 0.55% of cap) — the borrow inference fails
+
+results/q25_short_interest.md
+src/q25_import_short_positions.py
+src/q25_short_interest.py
+
+2026-09-21 23:23:56 +0200  6f3fdd7  Q26 spec: transaction-cost model (spreads, tax, borrow, impact by fund size); parallelise the Q23 DART pull
+
+docs/q26_transaction_costs_spec.md
+src/q23_korea_wide_quality.py
+
+2026-09-21 23:24:42 +0200  9a2f84e  Q26 script (transaction-cost model), written before running
+
+src/q26_transaction_costs.py
+
+2026-09-21 23:26:50 +0200  19801fd  Q26 result: survives costs at small scale (USD 10m net 250 bp, alpha t 2.15); break-even ~USD 45m
+
+results/q26_transaction_costs.md
+src/q26_transaction_costs.py
+
+2026-09-22 04:37:07 +0200  edf9a80  Q23 test script and the built market-wide quality factor (written before the regressions were run)
+
+src/q23_test.py
+
+2026-09-22 04:37:42 +0200  ade49c8  Q23 result: chip effect survives a market-wide Korean quality control (alpha +285 bp, t 3.78); the market-wide premium itself is absent
+
+results/q23_korea_wide_quality.md
+
+2026-09-22 08:11:43 +0200  0c77476  Add two figures (cumulative spread; net return by fund size) to both versions and the Overleaf bundle
+
+src/make_figures.py
+
+2026-09-22 09:29:55 +0200  f0c62e2  Rewrite the recap PDF for the post-Q21-Q26 state; correct the test count in FINDING.md
+
+src/make_recap_pdf.py
+
+2026-09-22 09:43:33 +0200  6f87025  Q27 pre-registration: Taiwan pre-AI test (decisive window 2016-01 to 2022-12, never examined)
+
+docs/q27_taiwan_pre_ai_preregistration.md
+src/q9_taiwan_download.py
+
+2026-09-22 10:08:26 +0200  51af00b  Q27 script and extended Taiwanese history (script written before running)
+
+src/q27_extend_tw_prices.py
+src/q27_taiwan_pre_ai.py
+
+2026-09-22 10:22:46 +0200  8206652  Q27 result: Taiwan pre-AI test PASSES (+187 bp/month, t 4.94, 83 unseen months; alpha t 6.60)
+
+results/q27_taiwan_pre_ai.md
+
+2026-09-22 10:24:49 +0200  904441a  Q27 in the paper: abstract, extension section, figure 1 (Taiwan 127 months), FINDING, appendix and handoff
+
+src/make_figures.py
+
+2026-09-22 10:52:12 +0200  af838b6  Q27b downloader: point-in-time Taiwanese universe and month-end prices including delisted names
+
+src/q27b_tw_pit_download.py
+
+2026-09-22 11:33:28 +0200  2e864b6  Q27b: retries for the exchange downloads; point-in-time test script
+
+src/q27b_taiwan_pit.py
+src/q27b_tw_pit_download.py
+
+2026-09-22 11:56:48 +0200  b97bdd9  Q27b: point-in-time Taiwan robustness passes; Taiwan's chip sector is almost survivorship-free
+
+results/q27b_taiwan_pit.md
+src/q27b_taiwan_pit.py
+
+2026-09-22 14:36:00 +0200  791a6d2  Retitle to 'Measurable but Barely Harvestable'; build the PDF with LaTeX instead of the Markdown renderer
+
+src/build_paper.py
+
+2026-09-22 14:47:20 +0200  0710869  Final title applied everywhere; author set; recap updated with the Taiwanese pre-AI evidence
+
+src/make_recap_pdf.py
+
+2026-09-22 14:57:32 +0200  9115485  Section 6.2: give the borrow numbers their market-wide baselines
+
+src/make_recap_pdf.py
+
+2026-09-22 15:09:41 +0200  1031dfd  Recap brought in line with the paper; draft bumped to v0.2 (22 Sep 2026)
+
+src/make_recap_pdf.py
+
+2026-09-22 15:35:06 +0200  c8986eb  Bound the borrow fee instead of assuming it; document the tax schedule
+
+results/q26b_borrow_bound.md
+src/make_recap_pdf.py
+src/q26b_borrow_bound.py
+
+2026-09-22 15:41:19 +0200  c94f7ae  Generate the short-leg borrow lookup list (50 names with ISINs)
+
+src/q28_short_leg_borrow_list.py
+
+2026-09-23 10:00:54 +0200  64f35d3  MiM not MSc; build now fails loudly when bibtex drops the bibliography
+
+src/build_paper.py
+
+2026-09-23 10:07:55 +0200  4ff0315  Figure 1 in the PDF was stale: build now syncs figures and the Overleaf zip
+
+src/build_paper.py
+
+2026-09-23 10:18:12 +0200  2ce6db4  v0.3: name the three signals apart; say what the Korean validation validated
+
+src/make_recap_pdf.py
+
+2026-09-28 17:38:09 +0200  5367fa3  Finished working paper: main.tex is the only source; Results rebuilt; Appendix B inside
+
+src/build_paper.py
+src/make_figures.py
+src/make_paper_pdf.py
+src/make_recap_pdf.py
+
+2026-10-15 15:34:16 +0200  27bae32  Q29 pre-registration: Fama-MacBeth, extended factor alpha, rule-only universe (before any code)
+
+docs/q29_referee_robustness_preregistration.md
+
+2026-10-15 15:39:46 +0200  0b298b3  Q29 referee robustness: all four decisive tests pass; SUE coverage gap disclosed
+
+results/q29_referee_robustness.md
+src/q29_referee_robustness.py
+
+2026-10-15 15:45:24 +0200  d036504  Journal-ready revision: equations, summary statistics, Q29 evidence, declarations, replication package
+
+src/export_public.py
+
+2026-10-15 17:25:32 +0200  2c879b2  export_public: keep paper/submission out of the public package
+
+src/export_public.py
+
+2026-10-15 17:32:28 +0200  2149a76  Public package: keep only what a reader needs; paper wording fix
+
+src/export_public.py
