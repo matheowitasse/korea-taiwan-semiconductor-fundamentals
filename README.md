@@ -52,4 +52,4 @@ The headline results come from these scripts, in this order:
 | J-Quants (Japan) | statements and prices | **not included** — subscription data; needs your own key in `JQUANTS_TOKEN` |
 | Korea Customs Service | export releases (short-horizon studies) | downloaded by `src/q1_download_kcs_releases.py` |
 
-API keys are read from environment variables and never stored in the repository.
+
